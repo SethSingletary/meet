@@ -52,3 +52,5 @@ When: The user has opened the basic app
 Then: Show a list of all events in calendar format
 
 Meet is an app designed to show you events going on in all citys! It includes an offline mode where you can see events that had been previosuly loaded for you
+
+I will be using serverless functions to pull events while online, scaling it as I recieve more clients. This will also allow me to not have the app break if it is offline.
