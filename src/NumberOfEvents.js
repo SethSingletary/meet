@@ -24,10 +24,10 @@ class NumberOfEvents extends Component {
         return(
             <div>
                 <h4>Number of Events</h4>
-                <input className="count" type="number" value={this.state.query} onChange={() => {this.handleInputChanged}}></input>
+                <input className="count" type="number" value={this.state.query} onChange={this.handleInputChanged}></input>
             </div>
         )
     }
-
 }
+
 export default NumberOfEvents;
