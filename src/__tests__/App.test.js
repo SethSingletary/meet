@@ -19,7 +19,7 @@ describe('<App /> component', () => {
         expect(AppWrapper.find(CitySearch)).toHaveLength(1);
     });
     test('render NumberOFEvents', () => {
-        expect(AppWrapper.find(NumberOfEvents)).toHaveLength(0);
+        expect(AppWrapper.find(NumberOfEvents)).toHaveLength(1);
     });
 });
 describe('<App /> intergration', () => {
