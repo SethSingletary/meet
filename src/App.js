@@ -5,7 +5,7 @@ import CitySearch from './CitySearch';
 import { mockData } from './mock-data';
 import { extractLocations, getEvents } from './api';
 import NumberOfEvents from './NumberOfEvents';
-import './nprogress';
+import nProgress from 'nprogress';
 
 class App extends Component {
   state = {
