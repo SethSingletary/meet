@@ -60,4 +60,21 @@ describe('<App /> intergration', () => {
         expect(AppWrapper.state('events')).toEqual(allEvents);
         AppWrapper.unmount();
       });
+
+      test("events state changes number of events changes", () => {
+        const AppWrapper = mount(<App />);
+        const eventCount = AppWrapper.state("count");
+        expect(eventCount).toEqual(AppWrapper.find(NumberOfEvents).props().query);
+        AppWrapper.unmount();
+      });
+    
+      test("get list of events matching the number of events selected by the user", async () => {
+        const AppWrapper = mount(<App />);
+        const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
+        const selectedNumber = 10;
+        const event = { target: { value: selectedNumber } };
+        await NumberOfEventsWrapper.instance().handleInputChanged(event);
+        expect(AppWrapper.state("query")).toEqual(selectedNumber);
+        expect(AppWrapper.state("events").length).toBe(selectedNumber);
+      });
 });

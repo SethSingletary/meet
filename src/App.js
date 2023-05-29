@@ -1,45 +1,46 @@
-import React, { Component } from 'react';
-import './App.css';
-import EventList from './EventList';
-import CitySearch from './CitySearch';
-import { mockData } from './mock-data';
-import { extractLocations, getEvents } from './api';
-import NumberOfEvents from './NumberOfEvents';
-import nProgress from 'nprogress';
+import React, { Component } from "react";
+import "./App.css";
+import EventList from "./EventList";
+import CitySearch from "./CitySearch";
+import { extractLocations, getEvents } from "./api";
+import NumberOfEvents from "./NumberOfEvents";
 
 class App extends Component {
   state = {
     events: [],
-    locations: []
-  }
+    locations: [],
+  };
   updateEvents = (location) => {
     getEvents().then((events) => {
-      const locationEvents = (location === 'all') ?
-        events :
-        events.filter((event) => event.location === location);
+      const locationEvents =
+        location === "all"
+          ? events
+          : events.filter((event) => event.location === location);
       this.setState({
-        events: locationEvents
+        events: locationEvents,
       });
     });
-  }
+  };
   componentDidMount() {
     getEvents().then((events) => {
       this.setState({ events, locations: extractLocations(events) });
     });
   }
-  componentWillUnmount(){
+  componentWillUnmount() {
     this.mounted = false;
   }
-  render(){
-  return (
-    <div className="App">
-      <EventList events={this.state.events}/>
-      <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
-      <NumberOfEvents/>
-    </div>
-  );
-  };
+  render() {
+    return (
+      <div className="App">
+        <CitySearch
+          locations={this.state.locations}
+          updateEvents={this.updateEvents}
+        />
+        <NumberOfEvents />
+        <EventList events={this.state.events} />
+      </div>
+    );
+  }
 }
 
 export default App;
-
