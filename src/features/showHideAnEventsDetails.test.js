@@ -29,8 +29,8 @@ defineFeature(feature, test => {
         let EventWrapper;
     	when('the user clicks the details button', () => {
             EventWrapper = shallow(<Event event={mockData[0]}/>);
-            let deatilsButtonWrapper = EventWrapper.find('.detailsButton');
-            deatilsButtonWrapper.simulate('click');
+            let detailsButtonWrapper = EventWrapper.find('.detailsButton');
+            detailsButtonWrapper.simulate('click');
 
     	});
 
@@ -48,8 +48,8 @@ defineFeature(feature, test => {
     	when('the user clicks the close button', () => {
             EventWrapper = shallow(<Event event={mockData[0]}/>);
             EventWrapper.setState({collapsed: false})
-            let deatilsButtonWrapper = EventWrapper.find('.detailsButton');
-            deatilsButtonWrapper.simulate('click');
+            let detailsButtonWrapper = EventWrapper.find('.detailsButton');
+            detailsButtonWrapper.simulate('click');
     	});
 
     	then('the event details should collapse', () => {
