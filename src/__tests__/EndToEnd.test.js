@@ -9,7 +9,7 @@ describe('show/hide an event details', () => {
         const page = await browser.newPage();
         await page.goto('http://localhost:3000/');
     
-        await page.waitForSelector(Event);
+        await page.waitForSelector('.event');
     
         const eventDetails = await page.$('.event .event__Details');
         expect(eventDetails).toBeNull();
