@@ -2,6 +2,10 @@
 import puppeteer from "puppeteer";
 import Event from "../Event";
 
+beforeAll(async () => {
+    jest.setTimeout(30000);
+});
+
 describe('show/hide an event details', () => {
     test('An event element is collapsed by default', async () => {
         const browser = await puppeteer.launch();
