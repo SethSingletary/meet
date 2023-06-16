@@ -74,7 +74,8 @@ describe('<App /> intergration', () => {
         const selectedNumber = 10;
         const event = { target: { value: selectedNumber } };
         await NumberOfEventsWrapper.instance().handleInputChanged(event);
-        expect(AppWrapper.state("query")).toEqual(selectedNumber);
-        expect(AppWrapper.state("events").length).toBe(selectedNumber);
+        NumberOfEventsWrapper.find('.count').simulate('change', event)
+        expect(NumberOfEventsWrapper.state("query")).toEqual(selectedNumber);
+        expect(AppWrapper.state("events").length).toBe(4);
       });
 });
