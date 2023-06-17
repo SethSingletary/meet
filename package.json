@@ -7,8 +7,10 @@
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "atatus-spa": "^4.5.0",
     "axios": "^1.4.0",
     "nprogress": "^0.2.0",
+    "puppeteer": "^16.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.1",
@@ -24,8 +26,7 @@
     "workbox-range-requests": "^6.5.4",
     "workbox-routing": "^6.5.4",
     "workbox-strategies": "^6.5.4",
-    "workbox-streams": "^6.5.4",
-    "puppeteer": "^16.1.0"
+    "workbox-streams": "^6.5.4"
   },
   "scripts": {
     "start": "react-scripts start",
