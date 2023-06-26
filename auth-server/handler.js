@@ -21,8 +21,8 @@ const credentials = {
   auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
   redirect_uris: ["https://meet-i8ljxpaef-sethsingletary.vercel.app/"],
   //redirect_uris: ["http://meet-eta-six.vercel.app/"],
-  //javascript_origins: ["https://SethSingletary.github.io", "http://localhost:3000", "https://meet-eta-six.vercel.app", "https://meet-i8ljxpaef-sethsingletary.vercel.app/"],
-  javascript_origins: ["https://SethSingletary.github.io", "http://localhost:3000", "https://meet-eta-six.vercel.app",],
+  javascript_origins: ["https://SethSingletary.github.io", "http://localhost:3000", "https://meet-eta-six.vercel.app", "https://meet-i8ljxpaef-sethsingletary.vercel.app/", "https://meet-i8ljxpaef-sethsingletary.vercel.app"],
+  //javascript_origins: ["https://SethSingletary.github.io", "http://localhost:3000", "https://meet-eta-six.vercel.app", "https://meet-eta-six.vercel.app/"],
 };
 const { client_secret, client_id, redirect_uris, calendar_id } = credentials;
 const oAuth2Client = new google.auth.OAuth2(
