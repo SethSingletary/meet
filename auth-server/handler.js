@@ -23,7 +23,8 @@ const credentials = {
   //redirect_uris: ["http://meet-eta-six.vercel.app/"],
   //javascript_origins: ["https://SethSingletary.github.io", "http://localhost:3000", "https://meet-eta-six.vercel.app", "https://meet-i8ljxpaef-sethsingletary.vercel.app/", "https://meet-i8ljxpaef-sethsingletary.vercel.app", "https://sethsingletary.github.io/meet/"],
   //javascript_origins: ["https://SethSingletary.github.io", "http://localhost:3000", "https://meet-eta-six.vercel.app", "https://meet-eta-six.vercel.app/"],
-  javascript_orgins: ["https://sethsingletary.github.io/meet/"],
+  //javascript_orgins: ["https://sethsingletary.github.io/meet/"],
+  javascript_origins: ["https://sethsingletary.github.io/meet/", "https://localhost:3000"],
 };
 const { client_secret, client_id, redirect_uris, calendar_id } = credentials;
 const oAuth2Client = new google.auth.OAuth2(
