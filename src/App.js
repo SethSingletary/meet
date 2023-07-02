@@ -48,8 +48,10 @@ class App extends Component {
           updateEvents={this.updateEvents}
         />
         <NumberOfEvents updateEvents={this.updateNumOfEvents}/>
-        <CityEventsChart allLocations={this.state.locations} events={this.state.events}/>
-        <EventGenresChart events={this.state.events}/>
+        <div>
+          <CityEventsChart allLocations={this.state.locations} events={this.state.events}/>
+          <EventGenresChart events={this.state.events}/>
+        </div>
         <EventList events={this.state.events} />
       </div>
     );
