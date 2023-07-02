@@ -2,9 +2,6 @@ import { useState, useEffect } from 'react';
 import {
     PieChart,
     Pie,
-    XAxis, YAxis,
-    CartesianGrid,
-    Tooltip,
     ResponsiveContainer
   } from 'recharts';
 
