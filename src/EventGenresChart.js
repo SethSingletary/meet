@@ -9,7 +9,7 @@ const EventGenresChart = ({ events }) => {
     const [data, setData] = useState([]);
     const genres = ['React', 'Javascript', 'Node', 'jQuery', 'Angular'];
 
-    useEffect(() => {setData(getData)}, [`${events}`]);
+    useEffect(() => {setData(getData());}, [`${events}`]);
 
     const getData = () => {
         genres.map(genre => {
