@@ -26,14 +26,23 @@ const EventGenresChart = ({ events }) => {
         return tempData
     }
 
-    const data01 = [
-      { name: 'Group A', value: 400 },
-      { name: 'Group B', value: 300 },
-      { name: 'Group C', value: 300 },
-      { name: 'Group D', value: 200 },
-      { name: 'Group E', value: 278 },
-      { name: 'Group F', value: 189 },
-    ];
+    const renderCustomizedLabel = ({ cx, cy, midAngle, outerRadius, percent, index }) => {
+      const RADIAN = Math.PI / 180;
+      const radius = outerRadius;
+      const x = cx + radius * Math.cos(-midAngle * RADIAN) * 1.07;
+      const y = cy + radius * Math.sin(-midAngle * RADIAN) * 1.07;
+      return percent ? (
+        <text
+          x={x}
+          y={y}
+          fill="#8884d8"
+          textAnchor={x > cx ? 'start' : 'end'}
+          dominantBaseline="central"
+        >
+          {`${genres[index]} ${(percent * 100).toFixed(0)}%`}
+        </text>
+      ) : null;
+    };
 
     return (
         <ResponsiveContainer width="99%" height={400}>
@@ -43,7 +52,7 @@ const EventGenresChart = ({ events }) => {
               dataKey="value"
               fill="#8884d8"
               labelLine={false}
-              label
+              label={renderCustomizedLabel}
               outerRadius={130}           
             />
           </PieChart>
