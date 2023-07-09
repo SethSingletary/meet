@@ -199,11 +199,13 @@ input[type="number"] {
 }
 .charts-container{
   grid-template-columns: 1fr 1fr;
+  background-color: blue;
 }
 
 @media (max-width: 768px){
   .charts-container{
     grid-template-columns: 1fr;
+    background-color: red;
   }
 }
 
