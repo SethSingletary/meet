@@ -197,11 +197,15 @@ input[type="number"] {
   letter-spacing: 0.2px;
   font-family: "Roboto";
 }
-.charts-container {
+.charts-container{
   grid-template-columns: 1fr 1fr;
 }
 
-
+@media (max-width: 768px){
+  .charts-container{
+    grid-template-columns: 1fr;
+  }
+}
 
 @media only screen and (min-width: 992px) {
   .data-vis-wrapper {
