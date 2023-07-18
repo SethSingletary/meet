@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 As a developer, I should be able to have the events collapsed, so that they take up less space
 Given: Nothing has been done to the app
 When: The user opens the app
